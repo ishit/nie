@@ -5,7 +5,7 @@
 [Ishit Mehta](https://ishit.github.io/), [Manmohan Chandraker](https://cseweb.ucsd.edu/~mkchandraker/), [Ravi Ramamoorthi](https://cseweb.ucsd.edu/~ravir/)  
 **ECCV 2022 (Oral)** 
 
-[**Paper**](https://ishit.github.io/static/nie_main.pdf) | [**Supplementary**](https://ishit.github.io/static/nie_appendix.pdf) | [**Video**](https://ishit.github.io/static/nie_evolution.mp4) | [**Project Page**](https://ishit.github.io/nie) <br>
+[**Project Page**](https://ishit.github.io/nie) | [**Paper**](https://ishit.github.io/static/nie_main.pdf) | [**Supplementary**](https://ishit.github.io/static/nie_appendix.pdf) | [**Video**](https://ishit.github.io/static/nie_evolution.mp4)<br>
 
 <div style="text-align: center">
 <img src="static/evolve.gif" width="600"/>
