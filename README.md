@@ -11,18 +11,19 @@
 <img src="static/evolve.gif" width="600"/>
 </div>
 
+<br>
 
-Quick run:
+>Quick run:
 ```
 python3 main.py --config config/vbunny.yaml
 ```
 
-Docker env:
+>Docker env:
 ```
 gitlab-registry.nrp-nautilus.io/ibmehta/lse
 ```
     
-Bibtex:
+>Citation:
 
 ```
 @article{mehta2022level,
