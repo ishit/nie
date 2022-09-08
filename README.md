@@ -17,11 +17,6 @@
 ```
 python3 main.py --config config/vbunny.yaml
 ```
-
->Docker env:
-```
-gitlab-registry.nrp-nautilus.io/ibmehta/lse
-```
     
 >Citation:
 
