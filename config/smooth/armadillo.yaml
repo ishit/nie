@@ -1,0 +1,13 @@
+exp: "armadillo"
+init_ckpt: "data/armadillo.pt"
+logdir: "logs/"
+
+epochs: 10
+iters: 200
+batch_size: 8192
+eps: 0.99
+mesh_res_limit: 175
+max_v: 750000
+lr: 0.000002
+mesh_log_freq: 1
+eik_lam: 0.001
