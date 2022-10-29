@@ -12,9 +12,6 @@ from scipy.spatial import cKDTree as KDTree
 import trimesh
 import torch.nn as nn
 from torch.nn import functional as F
-from sklearn.neighbors import NearestNeighbors
-import redner
-import matplotlib.pyplot as plt
 import argparse
 
 def gradient(y, x, grad_outputs=None):

@@ -7,7 +7,6 @@ import torch
 import torch.nn as nn
 
 import nvdiffrast.torch as dr
-import matplotlib.pyplot as plt
 
 from pytorch_lightning.utilities.seed import seed_everything
 from PIL import Image
