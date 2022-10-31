@@ -341,3 +341,35 @@ def save_image(fn, x):
     x = np.rint(x * 255.0)
     x = np.clip(x, 0, 255).astype(np.uint8)
     imageio.imsave(fn, x)
+
+def get_vol_points(vertices, grad, F, num_vol_points, sigma=None, both=None):
+    points_per_vert = 1
+
+    if sigma is not None:
+        a = sigma
+    else:
+        a = 0.1
+
+    rand_d = torch.randn(vertices.shape[0], points_per_vert, 1).cuda() * a
+    vol_points = vertices.unsqueeze(1) + rand_d * grad.unsqueeze(1)
+    F_ext = F.unsqueeze(1).repeat(1, points_per_vert, 1)
+    vol_points = vol_points.view(-1, 3)
+    F_ext = F_ext.view(-1, 1)
+    idx = np.random.choice(vertices.shape[0] * points_per_vert, num_vol_points // 2)
+    near_points = vol_points.view(-1, 3)[idx]
+    near_F = F_ext.view(-1, 1)[idx]
+
+    if both:
+        rand_d = torch.randn(vertices.shape[0], points_per_vert, 1).cuda() * 0.3
+    else:
+        rand_d = torch.randn(vertices.shape[0], points_per_vert, 1).cuda() * a
+
+    vol_points = vertices.unsqueeze(1) + rand_d * grad.unsqueeze(1)
+    F_ext = F.unsqueeze(1).repeat(1, points_per_vert, 1)
+    vol_points = vol_points.view(-1, 3)
+    F_ext = F_ext.view(-1, 1)
+    idx = np.random.choice(vertices.shape[0] * points_per_vert, num_vol_points // 2)
+    far_points = vol_points.view(-1, 3)[idx]
+    far_F = F_ext.view(-1, 1)[idx]
+
+    return torch.cat([near_points, far_points], dim=0), torch.cat([near_F, far_F], dim=0)
