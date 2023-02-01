@@ -17,7 +17,10 @@
 ```
 python3 main.py --config config/vbunny.yaml
 ```
-    
+>Docker Image:
+```
+gitlab-registry.nrp-nautilus.io/ibmehta/lse
+``` 
 >Citation:
 
 ```
